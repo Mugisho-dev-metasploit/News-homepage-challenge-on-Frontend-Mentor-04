@@ -411,3 +411,53 @@ body {
     pointer-events: auto; /* Active les clics quand visible */
   }
 }
+
+/* ==========================================
+   Animations & Transitions (Hover Effects)
+   ========================================== */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Déclenchera l'apparition fluide via le JS */
+.fade-in-on-load {
+  opacity: 0;
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+/* --- Effets dynamiques de survol (Micro-interactions) --- */
+
+/* Zoom progressif sur les images miniatures (Bottom articles) */
+.article-card:hover .card-image img {
+  transform: scale(1.08);
+}
+
+.card-image {
+  overflow: hidden; /* Empêche l'image zoomée de déborder */
+}
+
+.card-image img {
+  transform: scale(1);
+  transition: transform 0.4s ease-out;
+}
+
+/* Léger déplacement des articles latéraux au survol (News Sidebar) */
+.news-item {
+  transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateX(4px);
+}
+
+/* Bouton principal (Hero section) animé */
+.btn-primary:active {
+  transform: scale(0.97); /* Effet d'appui (Click) */
+}
