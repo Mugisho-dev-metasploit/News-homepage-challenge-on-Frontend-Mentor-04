@@ -96,3 +96,220 @@ button {
   cursor: pointer;
   font-family: inherit;
 }
+
+/* ==========================================
+   Layout Desktop (Étape 3)
+   ========================================== */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.header,
+.main-container {
+  width: 100%;
+  max-width: 1110px;
+}
+
+/* --- Header & Navigation --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.5rem 0;
+}
+
+.menu-open-btn,
+.menu-close-btn {
+  display: none; /* Hide toggle buttons on desktop */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links li a {
+  font-weight: var(--fw-regular);
+  color: var(--dark-grayish-blue);
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: var(--soft-orange);
+}
+
+/* --- Main Layout --- */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  margin-bottom: 5rem;
+}
+
+/* Top Section: Hero + Sidebar */
+.top-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: var(--fw-extrabold);
+  padding-right: 1.5rem;
+}
+
+.hero-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-description {
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  padding: 1rem 2.25rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--very-dark-blue);
+}
+
+/* --- News Sidebar --- */
+.news-sidebar {
+  background-color: var(--very-dark-blue);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  color: var(--soft-orange);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.news-item:not(:last-child) {
+  border-bottom: 1px solid var(--dark-grayish-blue);
+  padding-bottom: 2rem;
+}
+
+.news-item-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-item-title a {
+  color: var(--off-white);
+  font-weight: var(--fw-bold);
+}
+
+.news-item-title a:hover,
+.news-item-title a:focus {
+  color: var(--soft-orange);
+}
+
+.news-item-summary {
+  color: var(--grayish-blue);
+}
+
+/* --- Bottom Articles --- */
+.bottom-articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.article-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.card-image img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-number {
+  color: var(--grayish-blue);
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: var(--fw-extrabold);
+}
+
+.card-title a {
+  color: var(--very-dark-blue);
+}
+
+.card-title a:hover,
+.card-title a:focus {
+  color: var(--soft-red);
+}
+
+.card-summary {
+  font-size: 0.95rem;
+}
+
+/* --- Attribution --- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
