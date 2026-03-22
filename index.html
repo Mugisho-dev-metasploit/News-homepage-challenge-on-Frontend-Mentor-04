@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | News homepage</title>
+</head>
+
+<body>
+
+  <!-- Menu overlay for mobile (non visible sans CSS/JS) -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <header class="header">
+    <div class="logo">
+      <img src="./assets/images/logo.svg" alt="logo">
+    </div>
+
+    <!-- Bouton pour ouvrir le menu mobile -->
+    <button class="menu-open-btn" id="menuOpenBtn" aria-expanded="false" aria-controls="mainNav">
+      <img src="./assets/images/icon-menu.svg" alt="Ouvrir le menu">
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <!-- Bouton pour fermer le menu mobile -->
+      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Fermer le menu">
+        <img src="./assets/images/icon-menu-close.svg" alt="Fermer le menu">
+      </button>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Section Supérieure : Hero + Sidebar -->
+    <div class="top-section">
+
+      <!-- Section Hero (Image principale et texte) -->
+      <section class="hero">
+        <picture class="hero-image">
+          <!-- L'image de bureau sera choisie sur les grands écrans grâce au media attribut -->
+          <source media="(min-width: 768px)" srcset="./assets/images/image-web-3-desktop.jpg">
+          <!-- Image mobile par défaut -->
+          <img src="./assets/images/image-web-3-mobile.jpg"
+            alt="Illustration Web 3.0 avec des formes géométriques abstraites">
+        </picture>
+        <div class="hero-content">
+          <h1 class="hero-title">The Bright Future of Web 3.0?</h1>
+          <div class="hero-text-block">
+            <p class="hero-description">We dive into the next evolution of the web that claims to put the power of the
+              platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+            <a href="#" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Barre latérale des nouveautés ("New") -->
+      <aside class="news-sidebar">
+        <h2 class="sidebar-title">New</h2>
+
+        <div class="sidebar-articles">
+          <article class="news-item">
+            <h3 class="news-item-title"><a href="#">Hydrogen VS Electric Cars</a></h3>
+            <p class="news-item-summary">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+
+          <article class="news-item">
+            <h3 class="news-item-title"><a href="#">The Downsides of AI Artistry</a></h3>
+            <p class="news-item-summary">What are the possible adverse effects of on-demand AI image generation?</p>
+          </article>
+
+          <article class="news-item">
+            <h3 class="news-item-title"><a href="#">Is VC Funding Drying Up?</a></h3>
+            <p class="news-item-summary">Private funding by VC firms is down 50% YOY. We take a look at what that means.
+            </p>
+          </article>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Grille des 3 articles en bas -->
+    <section class="bottom-articles">
+
+      <article class="article-card">
+        <div class="card-image">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="Collection de vieux PC rétros">
+        </div>
+        <div class="card-content">
+          <span class="card-number">01</span>
+          <h3 class="card-title"><a href="#">Reviving Retro PCs</a></h3>
+          <p class="card-summary">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="card-image">
+          <img src="./assets/images/image-top-laptops.jpg" alt="Gros plan sur un clavier mécanique">
+        </div>
+        <div class="card-content">
+          <span class="card-number">02</span>
+          <h3 class="card-title"><a href="#">Top 10 Laptops of 2022</a></h3>
+          <p class="card-summary">Our best picks for various needs and budgets.</p>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="card-image">
+          <img src="./assets/images/image-gaming-growth.jpg" alt="Une main lançant une manette de jeu en l'air">
+        </div>
+        <div class="card-content">
+          <span class="card-number">03</span>
+          <h3 class="card-title"><a href="#">The Growth of Gaming</a></h3>
+          <p class="card-summary">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+</body>
+
+</html>
