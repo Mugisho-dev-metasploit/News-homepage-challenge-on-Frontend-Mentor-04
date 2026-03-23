@@ -8,7 +8,7 @@ function openMenu() {
   menuOverlay.classList.add('active');
   menuOpenBtn.setAttribute('aria-expanded', 'true');
   
-  // Désactive le défilement de l'arrière-plan
+  // Disables background scrolling
   document.body.style.overflow = 'hidden';
 }
 
@@ -17,21 +17,21 @@ function closeMenu() {
   menuOverlay.classList.remove('active');
   menuOpenBtn.setAttribute('aria-expanded', 'false');
   
-  // Restaure le défilement
+  // Restores scrolling
   document.body.style.overflow = 'auto';
 }
 
-// Événements sur les clics de boutons
+// Button click events
 menuOpenBtn.addEventListener('click', openMenu);
 menuCloseBtn.addEventListener('click', closeMenu);
 
-// Fermeture du menu si on clique sur la zone assombrie (overlay)
+// Close menu if clicking on the darkened area (overlay)
 menuOverlay.addEventListener('click', closeMenu);
 
 // ==========================================
-// Initialisation des animations au chargement
+// Animation initialization on loading
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-  // Déclenche l'animation d'apparition fluide lorsque le site est prêt (Défini dans style.css)
+  // Triggers smooth fade-in animation when the site is ready (Defined in style.css)
   document.body.classList.add('fade-in-on-load');
 });

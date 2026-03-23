@@ -1,5 +1,5 @@
 /* ==========================================
-   Typographie (Polices Locales)
+   Typography (Local Fonts)
    ========================================== */
 @font-face {
   font-family: 'Inter';
@@ -23,7 +23,7 @@
 }
 
 /* ==========================================
-   Variables CSS Globales
+   Global CSS Variables
    ========================================== */
 :root {
   /* Couleurs - Primary */
@@ -45,7 +45,7 @@
 }
 
 /* ==========================================
-   CSS Reset (Réinitialisation)
+   CSS Reset
    ========================================== */
 *,
 *::before,
@@ -56,7 +56,7 @@
 }
 
 /* ==========================================
-   Styles de Base / Global
+   Base Styles / Global
    ========================================== */
 body {
   font-family: var(--ff-primary);
@@ -68,7 +68,7 @@ body {
   min-height: 100vh;
 }
 
-/* Améliorations par défaut de certains éléments */
+/* Default improvements for certain elements */
 ul {
   list-style-type: none;
 }
@@ -98,7 +98,7 @@ button {
 }
 
 /* ==========================================
-   Layout Desktop (Étape 3)
+   Desktop Layout (Step 3)
    ========================================== */
 body {
   display: flex;
@@ -123,7 +123,7 @@ body {
 
 .menu-open-btn,
 .menu-close-btn {
-  display: none; /* Hide toggle buttons on desktop */
+  display: none;
 }
 
 .nav-links {
@@ -315,10 +315,10 @@ body {
 }
 
 /* ==========================================
-   Responsive Logic (Mobile < 768px) - Étape 4
+/* Responsive Logic (Mobile < 768px) - Step 4
    ========================================== */
 @media (max-width: 768px) {
-  /* Espacements réduits */
+  /* Reduced spacing */
   .header {
     padding: 2rem 0;
   }
@@ -328,7 +328,7 @@ body {
     margin-bottom: 3.5rem;
   }
 
-  /* Transformation des grilles en 1 colonne */
+  /* Transform grids to 1 column */
   .top-section {
     grid-template-columns: 1fr;
     gap: 3.5rem;
@@ -349,7 +349,7 @@ body {
     gap: 2rem;
   }
 
-  /* --- Navigation / Menu Off-Canvas --- */
+  /* Navigation / Menu Off-Canvas */
   .menu-open-btn {
     display: block;
   }
@@ -369,7 +369,7 @@ body {
     box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
   }
 
-  /* Classe ajoutée via JS (Étape 5) */
+  /* Class added via JS (Step 5) */
   .main-nav.active {
     right: 0;
   }
@@ -391,7 +391,7 @@ body {
     font-weight: var(--fw-bold);
   }
 
-  /* --- Overlay Sombre --- */
+  /* Dark Overlay */
   .menu-overlay {
     position: fixed;
     top: 0;
@@ -401,20 +401,18 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 150;
     opacity: 0;
-    pointer-events: none; /* Ignore les clics quand invisible */
+    pointer-events: none;
     transition: opacity 0.4s ease;
   }
 
-  /* Classe ajoutée via JS (Étape 5) */
+  /* Class added via JS (Step 5) */
   .menu-overlay.active {
     opacity: 1;
-    pointer-events: auto; /* Active les clics quand visible */
+    pointer-events: auto;
   }
 }
 
-/* ==========================================
-   Animations & Transitions (Hover Effects)
-   ========================================== */
+/* Animations & Transitions (Hover Effects) */
 @keyframes fadeInSlideUp {
   from {
     opacity: 0;
@@ -426,21 +424,21 @@ body {
   }
 }
 
-/* Déclenchera l'apparition fluide via le JS */
+/* Triggers smooth fade-in via JS */
 .fade-in-on-load {
   opacity: 0;
   animation: fadeInSlideUp 0.8s ease-out forwards;
 }
 
-/* --- Effets dynamiques de survol (Micro-interactions) --- */
+/* Dynamic hover effects (Micro-interactions) */
 
-/* Zoom progressif sur les images miniatures (Bottom articles) */
+/* Progressive zoom on thumbnail images (Bottom articles) */
 .article-card:hover .card-image img {
   transform: scale(1.08);
 }
 
 .card-image {
-  overflow: hidden; /* Empêche l'image zoomée de déborder */
+  overflow: hidden;
 }
 
 .card-image img {
@@ -448,7 +446,7 @@ body {
   transition: transform 0.4s ease-out;
 }
 
-/* Léger déplacement des articles latéraux au survol (News Sidebar) */
+/* Slight move of sidebar articles on hover (News Sidebar) */
 .news-item {
   transition: transform 0.3s ease;
 }
@@ -457,7 +455,7 @@ body {
   transform: translateX(4px);
 }
 
-/* Bouton principal (Hero section) animé */
+/* Main button (Hero section) animated */
 .btn-primary:active {
-  transform: scale(0.97); /* Effet d'appui (Click) */
+  transform: scale(0.97);
 }

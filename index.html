@@ -14,7 +14,7 @@
 
 <body>
 
-  <!-- Menu overlay for mobile (non visible sans CSS/JS) -->
+  <!-- Menu overlay for mobile (not visible without CSS/JS) -->
   <div class="menu-overlay" id="menuOverlay"></div>
 
   <header class="header">
@@ -22,15 +22,15 @@
       <img src="./assets/images/logo.svg" alt="logo">
     </div>
 
-    <!-- Bouton pour ouvrir le menu mobile -->
+    <!-- Button to open mobile menu -->
     <button class="menu-open-btn" id="menuOpenBtn" aria-expanded="false" aria-controls="mainNav">
-      <img src="./assets/images/icon-menu.svg" alt="Ouvrir le menu">
+      <img src="./assets/images/icon-menu.svg" alt="Open menu">
     </button>
 
     <nav class="main-nav" id="mainNav">
-      <!-- Bouton pour fermer le menu mobile -->
-      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Fermer le menu">
-        <img src="./assets/images/icon-menu-close.svg" alt="Fermer le menu">
+      <!-- Button to close mobile menu -->
+      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+        <img src="./assets/images/icon-menu-close.svg" alt="Close menu">
       </button>
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
@@ -44,17 +44,17 @@
 
   <main class="main-container">
 
-    <!-- Section Supérieure : Hero + Sidebar -->
+    <!-- Upper Section: Hero + Sidebar -->
     <div class="top-section">
 
-      <!-- Section Hero (Image principale et texte) -->
+      <!-- Hero Section (Main image and text) -->
       <section class="hero">
         <picture class="hero-image">
-          <!-- L'image de bureau sera choisie sur les grands écrans grâce au media attribut -->
+          <!-- Desktop image will be selected on large screens via media attribute -->
           <source media="(min-width: 768px)" srcset="./assets/images/image-web-3-desktop.jpg">
-          <!-- Image mobile par défaut -->
+          <!-- Mobile image by default -->
           <img src="./assets/images/image-web-3-mobile.jpg"
-            alt="Illustration Web 3.0 avec des formes géométriques abstraites">
+            alt="Web 3.0 illustration with abstract geometric shapes">
         </picture>
         <div class="hero-content">
           <h1 class="hero-title">The Bright Future of Web 3.0?</h1>
@@ -66,7 +66,7 @@
         </div>
       </section>
 
-      <!-- Barre latérale des nouveautés ("New") -->
+      <!-- News sidebar ("New") -->
       <aside class="news-sidebar">
         <h2 class="sidebar-title">New</h2>
 
@@ -91,12 +91,12 @@
 
     </div>
 
-    <!-- Grille des 3 articles en bas -->
+    <!-- Grid of 3 articles at the bottom -->
     <section class="bottom-articles">
 
       <article class="article-card">
         <div class="card-image">
-          <img src="./assets/images/image-retro-pcs.jpg" alt="Collection de vieux PC rétros">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="Collection of old retro PCs">
         </div>
         <div class="card-content">
           <span class="card-number">01</span>
@@ -107,7 +107,7 @@
 
       <article class="article-card">
         <div class="card-image">
-          <img src="./assets/images/image-top-laptops.jpg" alt="Gros plan sur un clavier mécanique">
+          <img src="./assets/images/image-top-laptops.jpg" alt="Close-up of a mechanical keyboard">
         </div>
         <div class="card-content">
           <span class="card-number">02</span>
@@ -118,7 +118,7 @@
 
       <article class="article-card">
         <div class="card-image">
-          <img src="./assets/images/image-gaming-growth.jpg" alt="Une main lançant une manette de jeu en l'air">
+          <img src="./assets/images/image-gaming-growth.jpg" alt="A hand throwing a game controller in the air">
         </div>
         <div class="card-content">
           <span class="card-number">03</span>
